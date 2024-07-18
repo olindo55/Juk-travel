@@ -14,14 +14,14 @@
 <body>
     <header>
         <nav>
-            <div class="my-navbar">
+            <div class="my-navbar" id="home">
                 <div class="logo">
-                    <a href="#">JUK<span class="point">.</span></a>
+                    <a href="#home">JUK<span class="point">.</span></a>
                 </div>
                     <ul class="my-links">
-                        <li><a href="good-deals">Bons plans</a></li>
-                        <li><a href="destinations">Destinations</a></li>
-                        <li><a href="gift-box">Box cadeaux</a></li>
+                        <li><a href="#good-deals">Bons plans</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#gift-box">Box cadeaux</a></li>
                     </ul>
                 <div class="button-connection">
                     <a href="connexion">Connexion</a>
@@ -33,76 +33,86 @@
         </nav>
         <div class="my-burger-menu">
             <ul class="my-links">
-                <li><a href="good-deals">Bons plans</a></li>
-                <li><a href="destinations">Destinations</a></li>
-                <li><a href="gift-box">Box cadeaux</a></li>
+                <li><a href="#good-deals">Bons plans</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#gift-box">Box cadeaux</a></li>
             </ul> 
             <div class="my-divider"></div>
             <div class="button-connection">
                 <a href="connexion">Connexion</a>
             </div>
         </div>
+        <!--  form -->
+        <div class="my-searchform container d-flex">
+            <select class="departure form-select " aria-label="Default select example">
+                <option selected>Départ</option>
+                <option value="paris">Paris</option>
+                <option value="marseille">Marseille</option>
+                <option value="lyon">Lyon</option>
+                <option value="bordeaux">Bordeaux</option>
+            </select>
+            <select class="destination form-select" aria-label="Default select example">
+                <option selected>Destination</option>
+                <option value="thailand">Thailande</option>
+                <option value="crete">Crète</option>
+                <option value="japan">Japon</option>
+                <option value="egypte">Egypte</option>
+            </select>
+            <input type="date" class="form-control" id="depart" placeholder="Départ">
+            <input type="date" class="form-control" id="retour" placeholder="Retour">
+            <div class="button-searchform">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+        </div>
+        <!-- end of the form -->
     </header>
-    <main>
-        <section class="baseline">
+    <main class="d-flex flex-column align-items-center">
+        <section class="baseline" id="good-deals">
             <h1>Vos plus beaux voyages commencent ici<span class="point">.</span></h1>
         </section>
-    </main>
-       <!--  <section class="discount">
-            <h2>Nos offres spéciales</h2>
-            <div id="carouselWithIndicators" class="carousel slide" data-bs-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="0" class="active"></li>
-                    <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="1"></li>
-                    <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="card">
-                        <div class="carousel-item active">
-                            <img src="https://picsum.photos/300/200" class="card-img-top" alt="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
+        <section class="discount col-10 d-flex flex-column align-items-center">
+            <h2>Nos bons plans</h2>
+            <div class="container fluid">
+                <!-- carousel -->
+                <div id="carouselWithIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="0" class="active"></li>
+                      <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="1"></li>
+                      <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <!-- card -->
+                        <div class="col">
+                            <div class="card col-lg-4">
+                              <img src="./asset/images/sara-dubler-Koei_7yYtIo-unsplash.jpg" class="card-img-top" alt="card-grid-image">
+                              <div class="card-body">
+                                <h4 class="card-destination fw-bold">Thailande</h4>
+                                <h5 class="card-title">De Bangkok aux Îles Paradisiaques</h5>
+                                <h6 class="card-days text-secondary fw-bold fs-5">10 jours</h6>
+                                <p class="card-text">Découvrez la magie de la Thaïlande, de l'effervescence de Bangkok aux plages idylliques des îles paradisiaques. Vivez une aventure inoubliable entre culture vibrante et paysages à couper le souffle.</p>
+                                <p class="card-since text-uppercase text-secondary fs-6 text-end mb-0">à partir de <span class="card-price fw-bold fs-4">1499&euro;*</span></p>
+                                <p class="card-cgv text-end text-secondary fs-6 mb-0">Tarif par personne base chambre double</p>
+                              </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/1200/400" class="card-img-top" alt="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://picsum.photos/300/200" class="card-img-top" alt="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
+                        <!-- end of card -->
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselWithIndicators" role="button" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselWithIndicators" role="button" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </a>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselWithIndicators" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselWithIndicators" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </a>
-            </div>
+                <!-- end of carousel -->
+            </div>   
         </section>
         <section class="destinations">
             <h2>Nos destinations</h2>
-            <div class="card-destinations"></div>
-            <div class="card-destinations"></div>
-            <div class="card-destinations"></div>
-            <div class="card-destinations"></div>
-            <div class="card-destinations"></div>
-            <div class="card-destinations"></div>
-            <div class="card-destinations"></div>
             <div class="card-destinations"></div>
         </section>
         <section class="bestsellers">
@@ -132,7 +142,19 @@
             <p>Mentions Légales</p>
             <p>Condition générale de vente</p>
         </div>
-    </footer> -->
+    </footer>
+    <script>
+        const burgerMenuButton = document.querySelector('.burger-menu-button')
+        const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i')
+        const burgerMenu = document.querySelector('.my-burger-menu')
+        burgerMenuButton.onclick = function(){
+            burgerMenu.classList.toggle('open')
+            const isOpen = burgerMenu.classList.contains('open')
+            burgerMenuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+
+        
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
