@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+/* Color palette*/
+/*
+    https://huemint.com/back-gradient-2/#palette=6ae3f1-fffcfa-ffa3a3
+    primary = #6ae3f1 - cyan
+    secondary = #fffcfa - white
+    tertiary = #ffa3a3 - pink 
+*/
+
+a{
+    text-decoration: none;
+    color: #fffcfa;
+}
+a:hover{
+    color: #ffa3a3;
+    /* font-weight: 700; */
+}
+li{
+    list-style: none;
+}
+
+/* Body */
+
+
+/* Header */
+header{
+    position: relative;
+    background-image: url(/asset/images/marc-doucakis-IhXYfHEbN5c-unsplash.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fffcfa;
+}
+nav{
+    width: 100%;
+    max-width: 1200px;
+    height: 84px;
+    padding: 0 2rem;
+    /* backdrop-filter: blur(3px); */
+    margin: 0 auto;
+}
+.my-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.my-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+.logo{
+    font-size: 3rem;
+    font-weight: 900;
+}
+.point{
+    color: #ffa3a3; 
+    font-size: 4rem;
+}
+.button-connection{
+    padding: 8px 10px;
+    border: #fffcfa solid 1px;
+    border-radius: 5px;
+}
+.button-connection:hover{
+    padding: 8px 10px;
+    border: #ffa3a3 solid 1px;
+    border-radius: 5px; 
+}
+.button-connection:hover a{
+    color: #ffa3a3;
+}
+.burger-menu-button{
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+.my-burger-menu{
+    display: none;
+}
+
+
+/* ------ Responsive -------- */
+@media (max-width: 990px){
+    /* header{
+        background: none;
+    } */
+    .my-navbar .my-links,
+    .my-navbar .button-connection{
+        display: none;
+    }
+    .my-navbar .burger-menu-button{
+        display: block;
+    }
+    .my-burger-menu{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* backdrop-filter: blur(3px); */
+    }
+    .my-burger-menu .my-links{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 0;
+    }
+    .my-divider{
+        border-top: #fffcfa solid 1px;
+        width: 30%;
+        margin: 10px auto 20px auto;
+    }    
+}
